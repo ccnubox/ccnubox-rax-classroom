@@ -1,0 +1,45 @@
+.app {
+  width: 750;
+  flex: 1;
+  align-items: center;
+  background-color: #efeff4;
+}
+
+.container {
+  width: 720;
+  flex: 1;
+}
+
+.item {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20;
+  background-color: #ffffff;
+  flex: 1;
+  align-items: center;
+}
+
+.title {
+  margin-top: 40;
+  font-size: 36;
+}
+
+.numbers_container {
+  width: 680;
+  margin-top: 40;
+  margin-bottom: 20;
+  padding-top: 20;
+  border-top: 2px solid #f5f5f5;
+}
+
+.numbers_item {
+  width: 20%;
+  height: 70;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.numbers_text {
+  font-size: 28;
+}

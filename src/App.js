@@ -5,17 +5,16 @@ import Image from 'rax-image';
 import styles from './App.css';
 import Picker from 'rax-picker';
 import Touchable from 'rax-touchable';
+import Link from 'rax-link';
 import InfoService from './services/index.js';
-import Options from './optionData.js';
-
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      weekno: Options.weekno,
-      weekday: Options.weekday,
-      building: Options.building
+      weekno: '1',
+      weekday: 'mon',
+      building: 7
     };
   }
 
@@ -39,7 +38,6 @@ class App extends Component {
                     this.setState({
                       weekno: item
                     })
-                    Options.weekno = item
                   }
                   }
                   style={styles.select_bar_text}>
@@ -64,8 +62,9 @@ class App extends Component {
                   <Picker.Item value={'19'} label={'第19周'} />
                   <Picker.Item value={'20'} label={'第20周'} />
                 </Picker>
-                <View style={styles.arrow}>
-                </View>
+                <Text>
+                  ▼
+                </Text>
               </View>
             </View>
           </View>
@@ -75,13 +74,12 @@ class App extends Component {
             </Text>
             <View style={styles.select_bar}>
               <View style={styles.select_bar_content}>
-              <Picker
+                <Picker
                   selectedValue={this.state.weekday}
                   onValueChange={(item) => {
                     this.setState({
                       weekday: item
                     })
-                    Options.weekday = item
                   }
                   }
                   style={styles.select_bar_text}>
@@ -91,6 +89,9 @@ class App extends Component {
                   <Picker.Item value={'thu'} label={'周四'} />
                   <Picker.Item value={'fri'} label={'周五'} />
                 </Picker>
+                <Text>
+                  ▼
+                </Text>
               </View>
             </View>
           </View>
@@ -112,27 +113,22 @@ class App extends Component {
                   <Picker.Item value={7} label={'七号楼'} />
                   <Picker.Item value={8} label={'八号楼'} />
                 </Picker>
-                <View style={styles.arrow}>
-                </View>
+                <Text>
+                  ▼
+                </Text>
               </View>
             </View>
           </View>
-          <Touchable onPress={() => {
-            Options.building = this.state.building
-            Options.weekday = this.state.weekday
-            Options.weekno = this.state.weekno
-            InfoService.getClassRoom(Options).then(data => {
-              alert(data)
-            });
-          }}>
+          <Link href={"./second.bundle.js?building=" 
+          +  this.state.building + "&weekno=" 
+          + this.state.weekno + "&weekday=" 
+          + this.state.weekday}>
             <View style={styles.search_bt}>
-
               <Text style={styles.search_bt_text}>
                 查询
               </Text>
             </View>
-          </Touchable>
-
+          </Link>
         </View>
       </View>
     );

@@ -9,8 +9,12 @@
   },
   "dependencies": {
     "rax": "^0.5.4",
+    "rax-hot-loader": "^0.6.4",
     "rax-icon": "^0.6.4",
     "rax-image": "^0.6.4",
+    "rax-link": "^0.6.4",
+    "rax-listview": "^0.6.4",
+    "rax-multirow": "^0.6.4",
     "rax-picker": "^0.6.4",
     "rax-text": "^0.5.4",
     "rax-touchable": "^0.6.4",
