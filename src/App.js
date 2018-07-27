@@ -6,7 +6,8 @@ import styles from './App.css';
 import Picker from 'rax-picker';
 import Touchable from 'rax-touchable';
 import Link from 'rax-link';
-import InfoService from './services/index.js';
+import Option from './optionMap'
+
 
 class App extends Component {
   constructor(props) {
@@ -41,26 +42,9 @@ class App extends Component {
                   }
                   }
                   style={styles.select_bar_text}>
-                  <Picker.Item value={'1'} label={'第1周'} />
-                  <Picker.Item value={'2'} label={'第2周'} />
-                  <Picker.Item value={'3'} label={'第3周'} />
-                  <Picker.Item value={'4'} label={'第4周'} />
-                  <Picker.Item value={'5'} label={'第5周'} />
-                  <Picker.Item value={'6'} label={'第6周'} />
-                  <Picker.Item value={'7'} label={'第7周'} />
-                  <Picker.Item value={'8'} label={'第8周'} />
-                  <Picker.Item value={'9'} label={'第9周'} />
-                  <Picker.Item value={'10'} label={'第10周'} />
-                  <Picker.Item value={'11'} label={'第11周'} />
-                  <Picker.Item value={'12'} label={'第12周'} />
-                  <Picker.Item value={'13'} label={'第13周'} />
-                  <Picker.Item value={'14'} label={'第14周'} />
-                  <Picker.Item value={'15'} label={'第15周'} />
-                  <Picker.Item value={'16'} label={'第16周'} />
-                  <Picker.Item value={'17'} label={'第17周'} />
-                  <Picker.Item value={'18'} label={'第18周'} />
-                  <Picker.Item value={'19'} label={'第19周'} />
-                  <Picker.Item value={'20'} label={'第20周'} />
+                  {Option.weeknoMap.map((item) => 
+                    <Picker.Item value={item.value} label={item.label}/>
+                  )}
                 </Picker>
                 <Text>
                   ▼
@@ -83,11 +67,9 @@ class App extends Component {
                   }
                   }
                   style={styles.select_bar_text}>
-                  <Picker.Item value={'mon'} label={'周一'} />
-                  <Picker.Item value={'tue'} label={'周二'} />
-                  <Picker.Item value={'wed'} label={'周三'} />
-                  <Picker.Item value={'thu'} label={'周四'} />
-                  <Picker.Item value={'fri'} label={'周五'} />
+                  {Option.weekdayMap.map((item) => 
+                    <Picker.Item value={item.value} label={item.label}/>
+                  )}
                 </Picker>
                 <Text>
                   ▼
@@ -110,8 +92,9 @@ class App extends Component {
                   }
                   }
                   style={styles.select_bar_text}>
-                  <Picker.Item value={7} label={'七号楼'} />
-                  <Picker.Item value={8} label={'八号楼'} />
+                  {Option.buildingMap.map((item) => 
+                    <Picker.Item value={item.value} label={item.label}/>
+                  )}
                 </Picker>
                 <Text>
                   ▼
@@ -119,10 +102,7 @@ class App extends Component {
               </View>
             </View>
           </View>
-          <Link href={"./second.bundle.js?building=" 
-          +  this.state.building + "&weekno=" 
-          + this.state.weekno + "&weekday=" 
-          + this.state.weekday}>
+          <Link href={`./second.bundle.js?building=${this.state.building}&weekno=${this.state.weekno}&weekday=${this.state.weekday}`}>
             <View style={styles.search_bt}>
               <Text style={styles.search_bt_text}>
                 查询
