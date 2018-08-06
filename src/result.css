@@ -10,26 +10,76 @@
   flex: 1;
 }
 
-.item {
-  width: 720;
+.tabHeaderSpace {
+  width: 750;
+  height: 20;
+  background-color: #efeff4;
+}
+
+.tabHeader {
+  width: 750;
+  background-color: #efeff4;
   margin: 0 auto;
-  margin-top: 20;
-  background-color: #fff;
+  border: none;
+}
+
+.tabHeaderItem {
   flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tabHeaderLine {
+  height: 40;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
 
-.title {
-  margin-top: 40;
-  font-size: 36;
+.timeLine {
+  width: 45;
+  height: 1;
+  background-color: #ceced2;
+}
+
+.tabHeaderDot {
+  width: 17;
+  height: 17;
+  border-radius: 17;
+  background-color: #ceced2;
+}
+
+.tabHeaderText {
+  font-size: 18;
+  color: #ceced2;
+}
+
+.tabHeaderDot_select {
+  width: 17;
+  height: 17;
+  border-radius: 17;
+  background-color: #6767fa;
+}
+
+.tabHeaderText_select {
+  font-size: 18;
+  color: #000000;
+}
+
+.item {
+  position: relative;
+  width: 550;
+  margin: 0 auto;
+  margin-top: 60;
+  flex: 1;
+  align-items: center;
+  z-index: 1;
+  background-color: #efeff4;
 }
 
 .numbers_container {
-  width: 680;
-  margin-top: 40;
-  margin-bottom: 20;
-  padding-top: 20;
-  border-top: 2px solid #f5f5f5;
+  width: 550;
 }
 
 .numbers_item {
@@ -41,5 +91,47 @@
 }
 
 .numbers_text {
-  font-size: 28;
+  font-size: 33;
+}
+
+.insetImg {
+  position: absolute;
+  right: 50;
+  bottom: 35;
+}
+
+.classroomInset {
+  width: 300;
+  height: 300;
+}
+
+.error_app {
+  background-color: #efeff4;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.error_container {
+  align-items: center;
+}
+
+.error_image {
+  width: 412;
+  height: 331;
+}
+
+.error_text {
+  margin-top: 80;
+  flex-direction: row;
+}
+
+.error_text_info {
+  font-size: 32;
+  color: #c6d2de;
+}
+
+.error_text_click {
+  font-size: 32;
+  color: #7b79ff;
 }
