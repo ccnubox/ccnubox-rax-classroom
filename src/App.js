@@ -8,6 +8,10 @@ import Touchable from 'rax-touchable';
 import Link from 'rax-link';
 import Option from './optionMap'
 
+const arrowIcon = {
+  uri: 'http://ocm66x3nz.bkt.clouddn.com/arrow.png'
+}
+
 
 class App extends Component {
   constructor(props) {
@@ -46,9 +50,7 @@ class App extends Component {
                     <Picker.Item value={item.value} label={item.label}/>
                   )}
                 </Picker>
-                <Text>
-                  ▼
-                </Text>
+                <Image style={styles.arrow_icon} source={arrowIcon} />
               </View>
             </View>
           </View>
@@ -71,9 +73,7 @@ class App extends Component {
                     <Picker.Item value={item.value} label={item.label}/>
                   )}
                 </Picker>
-                <Text>
-                  ▼
-                </Text>
+                <Image style={styles.arrow_icon} source={arrowIcon} />
               </View>
             </View>
           </View>
@@ -96,9 +96,7 @@ class App extends Component {
                     <Picker.Item value={item.value} label={item.label}/>
                   )}
                 </Picker>
-                <Text>
-                  ▼
-                </Text>
+                <Image style={styles.arrow_icon} source={arrowIcon} />
               </View>
             </View>
           </View>
