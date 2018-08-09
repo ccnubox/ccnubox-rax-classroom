@@ -70,12 +70,10 @@
 .item {
   position: relative;
   width: 550;
-  margin: 0 auto;
-  margin-top: 60;
+  margin: 60 auto;
   flex: 1;
   align-items: center;
-  z-index: 1;
-  background-color: #efeff4;
+  background-color: transparent;
 }
 
 .numbers_container {

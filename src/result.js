@@ -5,6 +5,7 @@ import styles from './result.css';
 import TabHeader from 'rax-tabheader';
 import Image from 'rax-image';
 import Touchable from 'rax-touchable';
+import ScrollView from 'rax-scrollview';
 import MultiRow from 'rax-multirow';
 import InfoService from './services/index.js';
 
@@ -100,27 +101,6 @@ class Result extends Component {
     this.fetchClassRoom()
   }
 
-  listItem = (item, index) => {
-    return (
-      <View style={styles.item}>
-        <Text style={styles.title}>{item.title}</Text>
-        <View style={styles.numbers_container}>
-          <MultiRow
-              dataSource={item.numbers}
-              cells={4}
-              renderCell={(item, index) => {
-                return (
-                  <View style={styles.numbers_item}>
-                    <Text style={styles.numbers_text}>{item}</Text>
-                  </View>
-                );
-              }
-            } />
-        </View>
-      </View>
-    );
-  }
-
   renderItem = (item, index) => {
     return <View style={styles.tabHeaderItem}>
             <View style={styles.tabHeaderLine}>
@@ -188,7 +168,8 @@ class Result extends Component {
                 source={classroomInset}
               />
           </View>
-          <View style={styles.item}>
+          <ScrollView showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false} style={styles.item}>
             <View style={styles.numbers_container}>
               <MultiRow
                   dataSource={this.state.ClassRoomShow}
@@ -202,7 +183,7 @@ class Result extends Component {
                   }
                 } />
             </View>
-          </View>
+          </ScrollView>
         </View>
       );
     }
