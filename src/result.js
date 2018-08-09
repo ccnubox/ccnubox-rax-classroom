@@ -90,7 +90,7 @@ class Result extends Component {
       })
     })
     .catch(data => {
-      alert(data)
+      // alert(data)
       this.setState({
         error: true
       })
