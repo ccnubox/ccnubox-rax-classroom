@@ -12,7 +12,7 @@
 
 .tabHeaderSpace {
   width: 750;
-  height: 20;
+  height: 22;
   background-color: #efeff4;
 }
 
@@ -20,7 +20,6 @@
   width: 750;
   background-color: #efeff4;
   margin: 0 auto;
-  border: none;
   border-bottom-color: transparent;
   border-bottom: none;
 }
@@ -60,6 +59,9 @@
   font-size: 32;
   color: #ceced2;
 }
+.tabHeaderText_container {
+  height: 32;
+}
 
 
 .tabHeaderDot_select {
@@ -81,6 +83,8 @@
   flex: 1;
   align-items: center;
   background-color: transparent;
+  margin-top: -2;
+  background-color: #efeff4;
 }
 
 .numbers_container {
@@ -104,6 +108,7 @@
   position: absolute;
   right: 50;
   bottom: 35;
+  z-index: 99;
 }
 
 .classroomInset {
@@ -120,6 +125,7 @@
 
 .error_container {
   align-items: center;
+  margin-top: -200;
 }
 
 .error_image {
@@ -130,11 +136,12 @@
 .error_text {
   margin-top: 80;
   flex-direction: row;
+  align-items: center;
 }
 
 .error_text_info {
   font-size: 32;
-  color: #c6d2de;
+  color: #000;
 }
 
 .error_text_click {
