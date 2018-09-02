@@ -21,6 +21,8 @@
   background-color: #efeff4;
   margin: 0 auto;
   border: none;
+  border-bottom-color: transparent;
+  border-bottom: none;
 }
 
 .tabHeaderItem {
@@ -28,13 +30,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  border-bottom-color: transparent;
+  border-bottom: none;
 }
 
 .tabHeaderLine {
-  height: 40;
+  height: 50;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border-bottom-color: transparent;
+  border-bottom: none;
 }
 
 .timeLine {
@@ -51,25 +57,26 @@
 }
 
 .tabHeaderText {
-  font-size: 18;
+  font-size: 32;
   color: #ceced2;
 }
 
+
 .tabHeaderDot_select {
-  width: 17;
-  height: 17;
-  border-radius: 17;
+  width: 22;
+  height: 22;
+  border-radius: 22;
   background-color: #6767fa;
 }
 
 .tabHeaderText_select {
-  font-size: 18;
+  font-size: 32;
   color: #000000;
 }
 
 .item {
   position: relative;
-  width: 550;
+  width: 750;
   margin: 60 auto;
   flex: 1;
   align-items: center;
@@ -78,6 +85,7 @@
 
 .numbers_container {
   width: 550;
+  margin-top: 100;
 }
 
 .numbers_item {
