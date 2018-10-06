@@ -80,7 +80,7 @@ class Result extends Component {
         });
         this.setState({
           ClassRoom,
-          ClassRoomShow: ClassRoom[0].numbers,
+          ClassRoomShow: ClassRoom[0].numbers
         });
         native.changeLoadingStatus(true);
       })
@@ -180,9 +180,11 @@ class Result extends Component {
               />
             </View>
           </ScrollView>
-          <View style={styles.insetImg}>
-            <Image style={styles.classroomInset} source={classroomInset} />
-          </View>
+          {this.state.ClassRoomShow.length > 45 ? null : (
+            <View style={styles.insetImg}>
+              <Image style={styles.classroomInset} source={classroomInset} />
+            </View>
+          )}
         </View>
       );
     }
