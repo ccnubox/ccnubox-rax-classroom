@@ -24,16 +24,18 @@
   height: 100;
   background-color: #ffffff;
   border-radius: 10;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
 }
 
 .select_bar_content {
-  width: 470;
+  width: 550;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: flex-start;
+}
+
+.select_bar_content_text {
+  width: 470;
+  padding-left: 48;
 }
 
 .select_bar_text {
